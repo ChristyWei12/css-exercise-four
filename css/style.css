@@ -1,4 +1,76 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
 body {
   background-color: #dadada;
   font-size: 10px;
 }
+
+.container {
+  margin: 1% 0%;
+}
+
+/* style of text */
+.container h1 {
+  font-size: 2em;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.description h1 {
+  text-transform: none;
+}
+
+/* insert the description into pictures */
+.description {
+  position:absolute;
+  z-index:2; /*what does 2 mean here?*/
+  left: 10%;
+  top: 10%;
+}
+
+.preview {
+  position:relative;
+  float: center;
+  margin: 1% 0%;
+  width: 100%;
+  height: 350px;
+}
+
+
+/*the style of image*/
+img {
+  width: 100%;
+  height: 100%;
+  /*display:block;
+  margin:auto;*/
+  object-fit: cover; /*make sure the image is not stretched when resizing*/
+}
+
+
+/*Media Query*/
+/*Tablets -- 2 columns -- 575px*/
+@media screen and (min-width: 575px){
+   .preview {
+     float: left;
+     position: relative;
+     width: 48%;
+     height: 200px;
+     margin: 1% 1%;
+ }
+    .container {
+     margin: 1% 10%;
+ }
+
+/*Larger Device - laptop -- 4 columns -- 991px*/
+@media screen and (min-width: 991px){
+   .preview {
+     float: left;
+     position: relative;
+     width: 23%;
+     height: 150px;
+     margin: 1% 1%;
+  }
